@@ -24,6 +24,10 @@ jobs:
           name: Print the Current Time
           command: date
 
+      - run: # run tests
+          name: test
+          command: mocha
+
 test:
   override:    
   - mocha
