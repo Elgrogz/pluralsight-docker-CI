@@ -7,6 +7,12 @@
 #    commands:
 #      - $DOCKER_HUB_TRIGGER
 
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node
+
 test:
   override:
     mocha
