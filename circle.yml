@@ -26,7 +26,7 @@ jobs:
 
       - run: # run tests
           name: test
-          command: test
+          command: npm test
 
 test:
   override:    
