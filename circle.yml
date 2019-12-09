@@ -7,23 +7,6 @@
 #    commands:
 #      - $DOCKER_HUB_TRIGGER
 
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/node:8.11
-
-    steps:
-      - checkout
-
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-
-      - run:
-          name: Print the Current Time
-          command: date
-
 test:
-  override:    
-  - mocha
+  override:
+    mocha
