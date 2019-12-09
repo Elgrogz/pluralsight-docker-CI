@@ -27,3 +27,7 @@ jobs:
       - run: # run tests
           name: test
           command: test
+
+      - run: # run tests
+          name: Greeting
+          command: echo Process Ending.
