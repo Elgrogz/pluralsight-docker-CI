@@ -1,13 +1,17 @@
-// Simple async test for HTTP 200 response code using supertest
-'use strict';
+const chai = require("chai");
+const chaiHttp = require("chai-http");
+var app = require("../app").getApp;
 
-var request = require("supertest"), 
-app = require("../app").getApp;
-
-describe('GET /', function(){
-  it('expects HTTP response 200', function(done){
-    request(app)
-     .get('/')
-	 .expect(200, done); 
+const { expect } = chai;
+chai.use(chaiHttp);
+describe("Server!", () => {
+  it("welcomes user to the api", done => {
+    chai
+      .request(app)
+      .get("/")
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        done();
+      });
   });
 });
