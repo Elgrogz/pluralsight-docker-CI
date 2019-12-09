@@ -13,7 +13,7 @@ describe("Server!", () => {
       .end((err, res) => {
         console.log("testing status");
         expect(res).to.have.status(200);
-        done();
       });
+      done();
   });
 });
