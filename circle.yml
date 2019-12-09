@@ -11,7 +11,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node
+      - image: circleci/node:8.11
 
     steps:
       - checkout
@@ -24,10 +24,6 @@ jobs:
           name: Print the Current Time
           command: date
 
-      - run: # run tests
-          name: test
-          command: test
-
-      - run: # run tests
-          name: Greeting
-          command: echo Process Ending.
+test:
+  override:    
+  - mocha
