@@ -27,7 +27,3 @@ jobs:
       - run: # run tests
           name: test
           command: npm test
-
-test:
-  override:    
-  - mocha
